@@ -6,11 +6,24 @@
 	<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
 	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 	<title>PyScript Sample</title>
+	<py-env>
+		- numpy
+	</py-env>
 </head>
 <body>
+	<div id="lightblue" style="background-color: lightblue"></div>
 	<py-script>
+import sys
+import pandas as pd
+
 for i in range(5):
 	print('Hello!')
+
+x = "HELLO"
+pyscript.write("lightblue", x)
+
+y = np.arange(1, 10)
+print(y)
 	</py-script>
 </body>
 </html>
